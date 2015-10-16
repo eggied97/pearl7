@@ -14,10 +14,10 @@ def modMacht(base, power, n):
 
     while power > 0:    #cycle through until the power is 0
         if(power % 2) == 1: #If the power is odd
-            result = (result*base) % n
+            result = (result*base) % n #it is a one, so multiply the awnser with the base
 
         power >>= 1 #Bitshift the power 1 bit to the right (remove the last binary digit (11101 => 1110).
-        base = base**2 % n
+        base = base**2 % n #square the base becasue we went up a bit
 
     return result
 
